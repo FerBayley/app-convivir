@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Header, Content, Footer, FooterTab, Button, Tab, Tabs, TabHeading, Icon, Left, Body, Right, Card, CardItem, Thumbnail } from 'native-base';
+import { Container, Header, Content, Footer, FooterTab, Button, Tab, Tabs, TabHeading, Icon, Left, Body, Right, Card, CardItem, Thumbnail, Title } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import {
     StyleSheet, 
@@ -8,24 +8,47 @@ import {
     StatusBar,
     Image,
     ImageBackground,
-    TouchableOpacity
+    TouchableOpacity,
+    Share
     
 } from 'react-native';
 
 class HomeScreen extends React.Component {
 
   static navigationOptions = {
-    title : 'Convivir Press App',
-    headerStyle: {
-      backgroundColor: '#052040',
-    },
-    headerTintColor: '#fff'
-  };
+    header: null,
+    headerLeft: null,
+    gesturesEnabled: false,
+  };   
+
+  onShare(){
+    Share.share({
+        title: 'Mi Pediatra Trivias',
+        uri:'https://www.mipediatra.com.ar',
+        message: 'Descargate la app Mi Pediatra Trivias. Jugá y participá por muchos premios. Descargala en https://www.mipediatra.com.ar'
+    });
+}
 
   render() {
     return (
 
       <Container style={styles.container}>
+
+        <Header style={styles.head}>
+          <Left>
+            <Button transparent></Button>
+          </Left>
+          <Body>
+            <Title style={styles.textoBotones}>Convivir App</Title>
+          </Body>
+          <Right>
+            <Button transparent>
+              <Icon name='share' onPress={this.onShare}
+                style={styles.textoBotones}
+              />
+            </Button>
+          </Right>
+        </Header>
 
           
         <TouchableOpacity>
@@ -43,39 +66,63 @@ class HomeScreen extends React.Component {
         <Grid>
           <Col style={{ height: 1000, padding: 7 }}>
 
-            <View style={styles.vistas}>
-                <Text>Inside</Text>
-            </View>  
-
-             <View style={styles.vistas}>
+            <TouchableOpacity>
+              <Image 
+                style={styles.vistas}
+                source={require('../assets/images/alimenta1.png')} />
               <Text>Alimentación</Text>
-            </View>
+            </TouchableOpacity>
 
-             <View style={styles.vistas}>
-              <Text>Alimentación</Text>
-            </View>
+            <TouchableOpacity>
+              <Image 
+                style={styles.vistas}
+                source={require('../assets/images/alimenta1.png')} />
+              <Text>Nombre</Text>
+            </TouchableOpacity>
 
-            <View style={styles.vistas}>
-               <Text>Nombre de la sección</Text>
-            </View>
+            <TouchableOpacity>
+              <Image 
+                style={styles.vistas}
+                source={require('../assets/images/alimenta1.png')} />
+              <Text>Nombre</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+              <Image 
+                style={styles.vistas}
+                source={require('../assets/images/alimenta1.png')} />
+              <Text>Nombre</Text>
+            </TouchableOpacity>
           </Col>
 
           <Col style={{ height: 1000, padding: 7 }}>
-            <View style={styles.vistas}>
-               <Text>Nombre de la sección</Text>
-            </View>
+            <TouchableOpacity>
+              <Image 
+                style={styles.vistas}
+                source={require('../assets/images/salud.png')} />
+              <Text>Nombre</Text>
+            </TouchableOpacity>
 
-            <View style={styles.vistas}>
-               <Text>Nombre de la sección</Text>
-            </View>
+            <TouchableOpacity>
+              <Image 
+                style={styles.vistas}
+                source={require('../assets/images/convivir1.png')} />
+              <Text>Nombre</Text>
+            </TouchableOpacity>
 
-            <View style={styles.vistas}>
-               <Text>Nombre de la sección</Text>
-            </View>
+            <TouchableOpacity>
+              <Image 
+                style={styles.vistas}
+                source={require('../assets/images/alimenta1.png')} />
+              <Text>Nombre</Text>
+            </TouchableOpacity>
 
-            <View style={styles.vistas}>
-               <Text>Nombre de la sección</Text>
-            </View>
+            <TouchableOpacity>
+              <Image 
+                style={styles.vistas}
+                source={require('../assets/images/alimenta1.png')} />
+              <Text>Nombre</Text>
+            </TouchableOpacity>
           </Col>
         </Grid>
 
@@ -85,13 +132,16 @@ class HomeScreen extends React.Component {
         <Footer style={styles.footer}>
           <FooterTab style={styles.footer}>
             <Button>
-              <Text style={styles.textoBotones}>INICIO</Text>
+              <Icon name="home" style={{ color: '#fff', fontWeight: 'bold' }} />
+              <Text style={styles.textoBotones}>Inicio</Text>
             </Button>
             <Button>
-              <Text style={styles.textoBotones}>LANZAMIENTOS</Text>
+              <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
+              <Text style={styles.textoBotones}>Lanzamientos</Text>
             </Button>
             <Button>
-              <Text style={styles.textoBotones}>NOVEDADES</Text>
+              <Icon name="paper" style={{ color: '#fff' }} />
+              <Text style={styles.textoBotones}>Novedades</Text>
             </Button>
           </FooterTab>
         </Footer>
@@ -109,7 +159,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#052040'
   },
   textoBotones: {
-    color: 'white'
+    color: 'white',
+    fontWeight: 'bold'
   },
   advisor: {
     flex: 1,
@@ -119,11 +170,11 @@ const styles = StyleSheet.create({
   textNovedades: {
     color: '#333', 
     fontSize: 16, 
-    paddingLeft: 15, 
+    textAlign: 'center',
     marginTop: 15
   },
   novedadesContainer: {
-    backgroundColor: '#DDD',
+    backgroundColor: '#00cec9',
     height: 50
   },
   vistas: {
@@ -134,8 +185,11 @@ const styles = StyleSheet.create({
     marginTop: 20
   },
   separata: {
-    marginTop: 50,
-    marginBottom: 50
+    marginTop: 100,
+    marginBottom: 100
+  },
+  head: {
+    backgroundColor: '#052040'
   }
 });
 
