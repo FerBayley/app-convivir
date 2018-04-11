@@ -1,12 +1,13 @@
 import React from 'react';
-import { Container, Header, Content, Footer, FooterTab, Button, Left, Body, Title, Right, Icon } from 'native-base';
+import { Container, Header, Content, Footer, FooterTab, Button, Left, Body, Title, Right, Icon, List, ListItem, Thumbnail  } from 'native-base';
 import {
     StyleSheet, 
     Text, 
     View, 
     StatusBar,
     TouchableOpacity,
-    Share
+    Share, 
+    Image
 } from 'react-native';
 
 class MedioAmbiente extends React.Component {
@@ -14,7 +15,7 @@ class MedioAmbiente extends React.Component {
   static navigationOptions = {
     header: null,
     headerLeft: null,
-    gesturesEnabled: false,
+    gesturesEnabled: true,
   };  
 
   onShare(){
@@ -31,7 +32,10 @@ class MedioAmbiente extends React.Component {
       <Container style={styles.container}>
         <Header style={styles.head}>
           <Left>
-            <Button transparent></Button>
+            <Button transparent>
+              <Icon name='arrow-back' onPress={() => this.props.navigation.navigate('HomeScreen')}
+                style={{ color: 'white' }}/>
+            </Button>
           </Left>
           <Body>
             <Title style={styles.textoBotones}>Medio Ambiente</Title>
@@ -57,7 +61,107 @@ class MedioAmbiente extends React.Component {
             barStyle="light-content"
         />
         <Content showsVerticalScrollIndicator={false}>
+          <Image style={styles.vidriera}          
+            source={require('../../assets/images/medioambiente-big.png')} 
+          />
 
+          <List>
+            <ListItem>
+                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/06/tension-emocional-150x150.jpg' }}
+                  style={{ marginRight: 20 }}
+                />
+                <Body>
+                  <TouchableOpacity>
+                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
+                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
+                  </TouchableOpacity>
+                </Body>
+            </ListItem>
+
+            <ListItem>
+                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/03/basura-marzo-150x150.jpg' }}
+                  style={{ marginRight: 20 }}
+                />
+                <Body>
+                  <TouchableOpacity>
+                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
+                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
+                  </TouchableOpacity>
+                </Body>
+            </ListItem>
+
+            <ListItem>
+                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/03/uruguay-marzo-150x150.jpg' }}
+                  style={{ marginRight: 20 }}
+                />
+                <Body>
+                  <TouchableOpacity>
+                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
+                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
+                  </TouchableOpacity>
+                </Body>
+            </ListItem>
+
+            <ListItem>
+                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/03/ser-urbano-150x150.jpg' }}
+                  style={{ marginRight: 20 }}
+                />
+                <Body>
+                  <TouchableOpacity>
+                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
+                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
+                  </TouchableOpacity>
+                </Body>
+            </ListItem>
+
+            <ListItem>
+                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/natwash-150x150.jpg' }}
+                  style={{ marginRight: 20 }}
+                />
+                <Body>
+                  <TouchableOpacity>
+                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
+                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
+                  </TouchableOpacity>
+                </Body>
+            </ListItem>
+
+            <ListItem>
+                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/drenaje-150x150.jpg' }}
+                  style={{ marginRight: 20 }}
+                />
+                <Body>
+                  <TouchableOpacity>
+                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
+                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
+                  </TouchableOpacity>
+                </Body>
+            </ListItem>
+
+            <ListItem>
+                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/10/NO-TIRARAS-copia-150x150.jpg' }}
+                  style={{ marginRight: 20 }}
+                />
+                <Body>
+                  <TouchableOpacity>
+                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
+                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
+                  </TouchableOpacity>
+                </Body>
+            </ListItem>
+
+            <ListItem>
+                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/10/comer-sano-hoy-copia-150x150.jpg' }}
+                  style={{ marginRight: 20 }}
+                />
+                <Body>
+                  <TouchableOpacity>
+                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
+                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
+                  </TouchableOpacity>
+                </Body>
+            </ListItem>
+          </List>
         </Content>
         
         <Footer style={styles.footer}>
@@ -135,6 +239,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     letterSpacing: 0.5,
     paddingTop: 10
+  },
+  vidriera: {
+    height: 250,
+    width: '100%'
   }
 });
 

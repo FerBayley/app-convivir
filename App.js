@@ -13,6 +13,8 @@ import MedioAmbiente from './screens/MedioAmbiente/MedioAmbiente'
 import VidaSana from './screens/VidaSana/VidaSana'
 import Alimentacion from './screens/Alimentacion/Alimentacion'
 
+import ProductoDestacado from './screens/ProductoDestacado'
+
 export default class App extends React.Component {
   render() {
     return (
@@ -31,6 +33,8 @@ const AppStackNavigator = StackNavigator({
   MedioAmbiente: { screen: MedioAmbiente },
   VidaSana: { screen: VidaSana },
   Alimentacion: { screen: Alimentacion },
+
+  ProductoDestacado: { screen: ProductoDestacado }
 })
 
 const styles = StyleSheet.create({

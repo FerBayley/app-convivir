@@ -49,27 +49,16 @@ class HomeScreen extends React.Component {
     const { isFontLoaded } = this.state;
     return (
       <Container style={styles.container}>
-        <Header style={styles.head}>
-          <Left>
-            <Button transparent></Button>
-          </Left>
+        <Header style={styles.head}>        
           <Body>
-            <Title style={styles.textoBotones}>Convivir App</Title>
-          </Body>
-          <Right>
-            <Button transparent>
-              <Icon name='share' onPress={this.onShare}
-                style={styles.textoBotones}
-              />
-            </Button>
-          </Right>
+            <Title style={styles.textoBotones}>Convivir Press App</Title>
+          </Body>          
         </Header>
 
-          
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('ProductoDestacado')}>
           <View style={styles.novedadesContainer}>
           <Icon name="md-arrow-forward" style={styles.advisor}>
-            <Text> Nuevos productos de Garden Angels</Text>
+            <Text> Nuevo producto de Garden Angels</Text>
           </Icon>
           </View>
         </TouchableOpacity>
@@ -95,7 +84,7 @@ class HomeScreen extends React.Component {
             <TouchableOpacity onPress={() => this.props.navigation.navigate('Homeopatia')}>
               <Image 
                 style={styles.vistas}
-                source={require('../assets/images/alimenta1.png')} />
+                source={require('../assets/images/homeopatia.png')} />
               <Text style={[styles.accesos, isFontLoaded && { fontFamily: 'DoHyeon' }]}>
                 Homeopatia
               </Text>
@@ -133,7 +122,7 @@ class HomeScreen extends React.Component {
             <TouchableOpacity onPress={() => this.props.navigation.navigate('MedioAmbiente')}>
               <Image 
                 style={styles.vistas}
-                source={require('../assets/images/convivir1.png')} />
+                source={require('../assets/images/medioambiente.png')} />
               <Text style={[styles.accesos, isFontLoaded && { fontFamily: 'DoHyeon' }]}>
                 Medio Ambiente
               </Text>
@@ -166,11 +155,6 @@ class HomeScreen extends React.Component {
           <FooterTab style={styles.footer}>
 
             <Button>
-              <Icon name="home" style={{ color: '#fff', fontWeight: 'bold' }} />
-              <Text style={styles.textoBotonesActive}>Inicio</Text>
-            </Button>
-
-            <Button>
               <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
               <Text style={styles.textoBotones}>Lanzamientos</Text>
             </Button>
@@ -178,6 +162,12 @@ class HomeScreen extends React.Component {
             <Button>
               <Icon name="paper" style={{ color: '#fff' }} />
               <Text style={styles.textoBotones}>Noticias</Text>
+            </Button>
+
+            <Button>
+              <Icon name="share" onPress={this.onShare}
+               style={{ color: '#fff' }} />
+              <Text style={styles.textoBotones}>Compartir</Text>
             </Button>
 
           </FooterTab>
