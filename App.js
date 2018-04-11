@@ -9,7 +9,7 @@ import Noticias from './screens/Noticias'
 import Ecologia from './screens/Ecologia/Ecologia'
 import Homeopatia from './screens/Homeopatia/Homeopatia'
 import Medicina from './screens/Medicina/Medicina'
-import MediMedioAmbientecina from './screens/MedioAmbiente/MedioAmbiente'
+import MedioAmbiente from './screens/MedioAmbiente/MedioAmbiente'
 import VidaSana from './screens/VidaSana/VidaSana'
 import Alimentacion from './screens/Alimentacion/Alimentacion'
 
@@ -28,7 +28,7 @@ const AppStackNavigator = StackNavigator({
   Ecologia: { screen: Ecologia },
   Homeopatia: { screen: Homeopatia },
   Medicina: { screen: Medicina },
-  MediMedioAmbientecina: { screen: MediMedioAmbientecina },
+  MedioAmbiente: { screen: MedioAmbiente },
   VidaSana: { screen: VidaSana },
   Alimentacion: { screen: Alimentacion },
 })

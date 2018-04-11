@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Header, Content, Footer, FooterTab, Button, Tab, Tabs, TabHeading, Icon, Left, Body, Right, Card, CardItem, Thumbnail, Title } from 'native-base';
 import { Col, Row, Grid } from 'react-native-easy-grid';
+import { Font } from 'expo';
 import {
     StyleSheet, 
     Text, 
@@ -15,6 +16,10 @@ import {
 
 class HomeScreen extends React.Component {
 
+  state = {
+    isFontLoaded: false
+  }
+
   static navigationOptions = {
     header: null,
     headerLeft: null,
@@ -23,17 +28,27 @@ class HomeScreen extends React.Component {
 
   onShare(){
     Share.share({
-        title: 'Mi Pediatra Trivias',
-        uri:'https://www.mipediatra.com.ar',
-        message: 'Descargate la app Mi Pediatra Trivias. Jugá y participá por muchos premios. Descargala en https://www.mipediatra.com.ar'
+        title: 'ConvivirPress App',
+        uri:'https://www.convivirpress.com',
+        message: 'Descargate la app del periodico Convivir y esta siempre informado sobre todo lo que pasa en el mundo del buen vivir. Descargala en https://www.convivirpress.com'
     });
 }
 
+  componentDidMount() {
+    Font.loadAsync({
+      'DoHyeon': require('../assets/fonts/DoHyeon-Regular.ttf')
+    }).then(() => {
+      this.setState({
+        isFontLoaded: true,
+      });
+    })
+  }
+
+
   render() {
+    const { isFontLoaded } = this.state;
     return (
-
       <Container style={styles.container}>
-
         <Header style={styles.head}>
           <Left>
             <Button transparent></Button>
@@ -53,7 +68,9 @@ class HomeScreen extends React.Component {
           
         <TouchableOpacity>
           <View style={styles.novedadesContainer}>
-            <Text style={styles.textNovedades}>Mira los nuevos productos de Garden Angels</Text>
+          <Icon name="md-arrow-forward" style={styles.advisor}>
+            <Text> Nuevos productos de Garden Angels</Text>
+          </Icon>
           </View>
         </TouchableOpacity>
 
@@ -66,62 +83,78 @@ class HomeScreen extends React.Component {
         <Grid>
           <Col style={{ height: 1000, padding: 7 }}>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Alimentacion')}>
               <Image 
                 style={styles.vistas}
                 source={require('../assets/images/alimenta1.png')} />
-              <Text>Alimentación</Text>
+                <Text style={[styles.accesos, isFontLoaded && { fontFamily: 'DoHyeon' }]}>
+                  Alimentación
+                </Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Homeopatia')}>
+              <Image 
+                style={styles.vistas}
+                source={require('../assets/images/alimenta1.png')} />
+              <Text style={[styles.accesos, isFontLoaded && { fontFamily: 'DoHyeon' }]}>
+                Homeopatia
+              </Text>
             </TouchableOpacity>
 
             <TouchableOpacity>
               <Image 
                 style={styles.vistas}
                 source={require('../assets/images/alimenta1.png')} />
-              <Text>Nombre</Text>
+              <Text style={[styles.accesos, isFontLoaded && { fontFamily: 'DoHyeon' }]}>
+                Nombre Sección
+              </Text>
             </TouchableOpacity>
 
             <TouchableOpacity>
               <Image 
                 style={styles.vistas}
                 source={require('../assets/images/alimenta1.png')} />
-              <Text>Nombre</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity>
-              <Image 
-                style={styles.vistas}
-                source={require('../assets/images/alimenta1.png')} />
-              <Text>Nombre</Text>
+              <Text style={[styles.accesos, isFontLoaded && { fontFamily: 'DoHyeon' }]}>
+                Nombre Sección
+              </Text>
             </TouchableOpacity>
           </Col>
 
           <Col style={{ height: 1000, padding: 7 }}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('VidaSana')}>
               <Image 
                 style={styles.vistas}
                 source={require('../assets/images/salud.png')} />
-              <Text>Nombre</Text>
+              <Text style={[styles.accesos, isFontLoaded && { fontFamily: 'DoHyeon' }]}>
+                Vida Sana
+              </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('MedioAmbiente')}>
               <Image 
                 style={styles.vistas}
                 source={require('../assets/images/convivir1.png')} />
-              <Text>Nombre</Text>
+              <Text style={[styles.accesos, isFontLoaded && { fontFamily: 'DoHyeon' }]}>
+                Medio Ambiente
+              </Text>
             </TouchableOpacity>
 
             <TouchableOpacity>
               <Image 
                 style={styles.vistas}
                 source={require('../assets/images/alimenta1.png')} />
-              <Text>Nombre</Text>
+              <Text style={[styles.accesos, isFontLoaded && { fontFamily: 'DoHyeon' }]}>
+                Nombre Sección
+              </Text>
             </TouchableOpacity>
 
             <TouchableOpacity>
               <Image 
                 style={styles.vistas}
                 source={require('../assets/images/alimenta1.png')} />
-              <Text>Nombre</Text>
+              <Text style={[styles.accesos, isFontLoaded && { fontFamily: 'DoHyeon' }]}>
+                Nombre Sección
+              </Text>
             </TouchableOpacity>
           </Col>
         </Grid>
@@ -131,18 +164,22 @@ class HomeScreen extends React.Component {
         
         <Footer style={styles.footer}>
           <FooterTab style={styles.footer}>
+
             <Button>
               <Icon name="home" style={{ color: '#fff', fontWeight: 'bold' }} />
-              <Text style={styles.textoBotones}>Inicio</Text>
+              <Text style={styles.textoBotonesActive}>Inicio</Text>
             </Button>
+
             <Button>
               <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
               <Text style={styles.textoBotones}>Lanzamientos</Text>
             </Button>
+
             <Button>
               <Icon name="paper" style={{ color: '#fff' }} />
-              <Text style={styles.textoBotones}>Novedades</Text>
+              <Text style={styles.textoBotones}>Noticias</Text>
             </Button>
+
           </FooterTab>
         </Footer>
       </Container>
@@ -162,34 +199,44 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold'
   },
+  textoBotonesActive: {
+    color: 'skyblue',
+    fontWeight: 'bold'
+  },
   advisor: {
     flex: 1,
-    backgroundColor: 'red',
-    height: 60
+    fontSize: 17, 
+    textAlign: 'center', 
+    marginTop: 17
   },
   textNovedades: {
     color: '#333', 
-    fontSize: 16, 
+    fontSize: 15, 
     textAlign: 'center',
-    marginTop: 15
+    padding: 15,
   },
   novedadesContainer: {
     backgroundColor: '#00cec9',
     height: 50
   },
   vistas: {
-    backgroundColor: 'grey',
     height: 250,
     width: '100%',
     borderRadius: 10,
     marginTop: 20
   },
   separata: {
-    marginTop: 100,
-    marginBottom: 100
+    marginTop: 130,
+    marginBottom: 130
   },
   head: {
     backgroundColor: '#052040'
+  },
+  accesos: {
+    fontSize: 18,
+    textAlign: 'center',
+    letterSpacing: 0.5,
+    paddingTop: 10
   }
 });
 
