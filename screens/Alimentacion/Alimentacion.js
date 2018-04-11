@@ -73,7 +73,7 @@ class Alimentacion extends React.Component {
                   style={{ marginRight: 20 }}
                 />
                 <Body>
-                  <TouchableOpacity>
+                  <TouchableOpacity onPress={() => this.props.navigation.navigate('AlimentacionArticulo')}>
                     <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
                     <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
                   </TouchableOpacity>
@@ -174,12 +174,12 @@ class Alimentacion extends React.Component {
               <Text style={styles.textoBotonesActive}>Inicio</Text>
             </Button>
 
-            <Button>
+            <Button onPress={() => this.props.navigation.navigate('Noticias')}>
               <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
               <Text style={styles.textoBotones}>Lanzamientos</Text>
             </Button>
 
-            <Button>
+            <Button onPress={() => this.props.navigation.navigate('Lanzamientos')}>
               <Icon name="paper" style={{ color: '#fff' }} />
               <Text style={styles.textoBotones}>Noticias</Text>
             </Button>

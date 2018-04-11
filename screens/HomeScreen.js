@@ -155,19 +155,18 @@ class HomeScreen extends React.Component {
           <FooterTab style={styles.footer}>
 
             <Button>
+              <Icon name="home" style={{ color: '#fff', fontWeight: 'bold' }} />
+              <Text style={styles.textoBotonesActive}>Inicio</Text>
+            </Button>
+
+            <Button onPress={() => this.props.navigation.navigate('Lanzamientos')}>
               <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
               <Text style={styles.textoBotones}>Lanzamientos</Text>
             </Button>
 
-            <Button>
+            <Button onPress={() => this.props.navigation.navigate('Noticias')}>
               <Icon name="paper" style={{ color: '#fff' }} />
               <Text style={styles.textoBotones}>Noticias</Text>
-            </Button>
-
-            <Button>
-              <Icon name="share" onPress={this.onShare}
-               style={{ color: '#fff' }} />
-              <Text style={styles.textoBotones}>Compartir</Text>
             </Button>
 
           </FooterTab>

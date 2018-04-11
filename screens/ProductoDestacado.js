@@ -79,12 +79,12 @@ class ProductoDestacado extends React.Component {
               <Text style={styles.textoBotonesActive}>Inicio</Text>
             </Button>
 
-            <Button>
+            <Button onPress={() => this.props.navigation.navigate('Lanzamientos')}>
               <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
               <Text style={styles.textoBotones}>Lanzamientos</Text>
             </Button>
 
-            <Button>
+            <Button onPress={() => this.props.navigation.navigate('Noticias')}>
               <Icon name="paper" style={{ color: '#fff' }} />
               <Text style={styles.textoBotones}>Noticias</Text>
             </Button>

@@ -67,11 +67,11 @@ class Homeopatia extends React.Component {
 
           <List>
             <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/08/vidas-150x150.jpg' }}
+                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/01/homeopatia-porque-no-150x150.jpg' }}
                   style={{ marginRight: 20 }}
                 />
                 <Body>
-                  <TouchableOpacity>
+                  <TouchableOpacity onPress={() => this.props.navigation.navigate('HomeopatiaArticulo')}>
                     <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
                     <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
                   </TouchableOpacity>
@@ -167,17 +167,17 @@ class Homeopatia extends React.Component {
         <Footer style={styles.footer}>
           <FooterTab style={styles.footer}>
 
-            <Button onPress={() => this.props.navigation.navigate('HomeScreen')}>
+             <Button onPress={() => this.props.navigation.navigate('HomeScreen')}>
               <Icon name="home" style={{ color: '#fff', fontWeight: 'bold' }} />
               <Text style={styles.textoBotonesActive}>Inicio</Text>
             </Button>
 
-            <Button>
+            <Button onPress={() => this.props.navigation.navigate('Noticias')}>
               <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
               <Text style={styles.textoBotones}>Lanzamientos</Text>
             </Button>
 
-            <Button>
+            <Button onPress={() => this.props.navigation.navigate('Lanzamientos')}>
               <Icon name="paper" style={{ color: '#fff' }} />
               <Text style={styles.textoBotones}>Noticias</Text>
             </Button>

@@ -29,15 +29,20 @@ class Ecologia extends React.Component {
         
         <Footer style={styles.footer}>
           <FooterTab style={styles.footer}>
-            <Button>
-              <Text style={styles.textoBotones}>TAB 1</Text>
-            </Button>
-            <Button>
-              <Text style={styles.textoBotones}>TAB 2</Text>
-            </Button>
-            <Button>
-              <Text style={styles.textoBotones}>TAB 3</Text>
-            </Button>
+            <Button onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                <Icon name="home" style={{ color: '#fff', fontWeight: 'bold' }} />
+                <Text style={styles.textoBotonesActive}>Inicio</Text>
+              </Button>
+
+              <Button onPress={() => this.props.navigation.navigate('Noticias')}>
+                <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
+                <Text style={styles.textoBotones}>Lanzamientos</Text>
+              </Button>
+
+              <Button onPress={() => this.props.navigation.navigate('Lanzamientos')}>
+                <Icon name="paper" style={{ color: '#fff' }} />
+                <Text style={styles.textoBotones}>Noticias</Text>
+              </Button>
           </FooterTab>
         </Footer>
       </Container>

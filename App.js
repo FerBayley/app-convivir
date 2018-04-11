@@ -15,6 +15,14 @@ import Alimentacion from './screens/Alimentacion/Alimentacion'
 
 import ProductoDestacado from './screens/ProductoDestacado'
 
+import AlimentacionArticulo from './screens/AlimentacionArticulo'
+
+import VidaSanaArticulo from './screens/VidaSanaArticulo'
+
+import HomeopatiaArticulo from './screens/HomeopatiaArticulo'
+
+import MedioAmbienteArticulo from './screens/MedioAmbienteArticulo'
+
 export default class App extends React.Component {
   render() {
     return (
@@ -34,7 +42,15 @@ const AppStackNavigator = StackNavigator({
   VidaSana: { screen: VidaSana },
   Alimentacion: { screen: Alimentacion },
 
-  ProductoDestacado: { screen: ProductoDestacado }
+  ProductoDestacado: { screen: ProductoDestacado },
+
+  AlimentacionArticulo: { screen: AlimentacionArticulo },
+
+  VidaSanaArticulo: { screen: VidaSanaArticulo },
+
+  HomeopatiaArticulo: { screen: HomeopatiaArticulo },
+
+  MedioAmbienteArticulo: { screen: MedioAmbienteArticulo }
 })
 
 const styles = StyleSheet.create({
