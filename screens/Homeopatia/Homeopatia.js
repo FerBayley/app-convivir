@@ -21,7 +21,7 @@ class Homeopatia extends React.Component {
   onShare(){
     Share.share({
         title: 'ConvivirPress App',
-        uri:'https://www.convivirpress.com',
+        uri:'http://convivirpress.com/',
         message: 'Descargate la app del periodico Convivir y esta siempre informado sobre todo lo que pasa en el mundo del buen vivir. Descargala en https://www.convivirpress.com'
     });
 }
@@ -49,10 +49,10 @@ class Homeopatia extends React.Component {
           </Right>
         </Header>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('ProductoDestacado')}>
           <View style={styles.novedadesContainer}>
           <Icon name="md-arrow-forward" style={styles.advisor}>
-            <Text> Nuevos productos de Garden Angels</Text>
+            <Text> Leche de almendras Tratenfu</Text>
           </Icon>
           </View>
         </TouchableOpacity>
@@ -66,101 +66,80 @@ class Homeopatia extends React.Component {
           />
 
           <List>
+            <View style={{ backgroundColor: '#333' }}>
+              <ListItem>
+                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/11/perro-pirotecnia-150x150.jpg' }}
+                    style={{ marginRight: 20 }}
+                  />
+                  <Body>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('HomeopatiaArticulo1')}>
+                      <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#fff' }}>Mi perro tiene terror a las tormentas y petardos</Text>
+                    </TouchableOpacity>
+                  </Body>
+              </ListItem>
+            </View>
+
+            <View style={{ backgroundColor: '#dfe6e9' }}>
+              <ListItem>
+                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/10/perros-gripe2-150x150.jpg' }}
+                    style={{ marginRight: 20 }}
+                  />
+                  <Body>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('HomeopatiaArticulo2')}>
+                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>El NOSODE homeopático</Text>
+                    </TouchableOpacity>
+                  </Body>
+              </ListItem>
+            </View>
+
             <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/01/homeopatia-porque-no-150x150.jpg' }}
+                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/09/gatos-cola-levantada-2-150x150.jpg' }}
                   style={{ marginRight: 20 }}
                 />
                 <Body>
-                  <TouchableOpacity onPress={() => this.props.navigation.navigate('HomeopatiaArticulo')}>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
+                  <TouchableOpacity onPress={() => this.props.navigation.navigate('HomeopatiaArticulo3')}>
+                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Las señales del gato</Text>
                   </TouchableOpacity>
                 </Body>
             </ListItem>
 
+            <View style={{ backgroundColor: '#dfe6e9' }}>
+              <ListItem>
+                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/08/Dr-House-150x150.jpg' }}
+                    style={{ marginRight: 20 }}
+                  />
+                  <Body>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('HomeopatiaArticulo4')}>
+                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Lo primero es no dañar</Text>
+                    </TouchableOpacity>
+                  </Body>
+              </ListItem>
+            </View>
+
             <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/11/homeopatia-150x150.jpg' }}
+                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/08/perro-vegetales-150x150.jpg' }}
                   style={{ marginRight: 20 }}
                 />
                 <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
+                  <TouchableOpacity onPress={() => this.props.navigation.navigate('HomeopatiaArticulo5')}>
+                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>¿Puede el perro recibir una dieta vegana?</Text>
                   </TouchableOpacity>
                 </Body>
             </ListItem>
 
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/06/homeopatia-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
-
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/01/homeopatia-porque-no-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
-
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/11/homeopatia-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
-
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/06/homeopatia-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
-
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/03/slider-cantera-1500x630-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
-
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/el-cuerpo-grita-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
+            <View style={{ backgroundColor: '#dfe6e9' }}>
+              <ListItem>
+                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/07/homeopat%C3%ADaparaveterinaria6-150x150.jpg' }}
+                    style={{ marginRight: 20 }}
+                  />
+                  <Body>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('HomeopatiaArticulo6')}>
+                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Porqué me hice homeópata veterinario</Text>
+                    </TouchableOpacity>
+                  </Body>
+              </ListItem>
+            </View>
+            
           </List>
         </Content>
         
@@ -172,14 +151,14 @@ class Homeopatia extends React.Component {
               <Text style={styles.textoBotonesActive}>Inicio</Text>
             </Button>
 
-            <Button onPress={() => this.props.navigation.navigate('Noticias')}>
-              <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
-              <Text style={styles.textoBotones}>Lanzamientos</Text>
-            </Button>
-
             <Button onPress={() => this.props.navigation.navigate('Lanzamientos')}>
               <Icon name="paper" style={{ color: '#fff' }} />
               <Text style={styles.textoBotones}>Noticias</Text>
+            </Button>
+
+            <Button onPress={() => this.props.navigation.navigate('Noticias')}>
+              <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
+              <Text style={styles.textoBotones}>Lanzamientos</Text>
             </Button>
 
           </FooterTab>
@@ -195,7 +174,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
   footer: {
-    backgroundColor: '#052040'
+    backgroundColor: '#000',
+    height: 80
   },
   textoBotones: {
     color: 'white',
@@ -232,7 +212,7 @@ const styles = StyleSheet.create({
     marginBottom: 130
   },
   head: {
-    backgroundColor: '#052040'
+    backgroundColor: '#000000'
   },
   accesos: {
     fontSize: 18,
@@ -241,7 +221,7 @@ const styles = StyleSheet.create({
     paddingTop: 10
   },
   vidriera: {
-    height: 250,
+    height: 100,
     width: '100%'
   }
 });

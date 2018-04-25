@@ -29,7 +29,7 @@ class HomeScreen extends React.Component {
   onShare(){
     Share.share({
         title: 'ConvivirPress App',
-        uri:'https://www.convivirpress.com',
+        uri:'http://convivirpress.com/',
         message: 'Descargate la app del periodico Convivir y esta siempre informado sobre todo lo que pasa en el mundo del buen vivir. Descargala en https://www.convivirpress.com'
     });
 }
@@ -51,14 +51,18 @@ class HomeScreen extends React.Component {
       <Container style={styles.container}>
         <Header style={styles.head}>        
           <Body>
-            <Title style={styles.textoBotones}>Convivir Press App</Title>
+            <View>
+              <Image style={{ width: 40, height: 40, marginTop: 15 }}
+                 source={require('../assets/images/loguito.png')} />
+            </View>
+            <Title style={styles.textoBotones}>Convivir Press</Title>
           </Body>          
         </Header>
 
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('ProductoDestacado')}>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('Alimentacion')}>
           <View style={styles.novedadesContainer}>
           <Icon name="md-arrow-forward" style={styles.advisor}>
-            <Text> Nuevo producto de Garden Angels</Text>
+            <Text> Leche de almendras Tratenfu</Text>
           </Icon>
           </View>
         </TouchableOpacity>
@@ -90,21 +94,12 @@ class HomeScreen extends React.Component {
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Celiaquia')}>
               <Image 
                 style={styles.vistas}
-                source={require('../assets/images/alimenta1.png')} />
+                source={require('../assets/images/celiacos.png')} />
               <Text style={[styles.accesos, isFontLoaded && { fontFamily: 'DoHyeon' }]}>
-                Nombre Sección
-              </Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity>
-              <Image 
-                style={styles.vistas}
-                source={require('../assets/images/alimenta1.png')} />
-              <Text style={[styles.accesos, isFontLoaded && { fontFamily: 'DoHyeon' }]}>
-                Nombre Sección
+                Celiaquia
               </Text>
             </TouchableOpacity>
           </Col>
@@ -128,21 +123,12 @@ class HomeScreen extends React.Component {
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('Herboristeria')}>
               <Image 
                 style={styles.vistas}
-                source={require('../assets/images/alimenta1.png')} />
+                source={require('../assets/images/herboristeria-thumb.png')} />
               <Text style={[styles.accesos, isFontLoaded && { fontFamily: 'DoHyeon' }]}>
-                Nombre Sección
-              </Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity>
-              <Image 
-                style={styles.vistas}
-                source={require('../assets/images/alimenta1.png')} />
-              <Text style={[styles.accesos, isFontLoaded && { fontFamily: 'DoHyeon' }]}>
-                Nombre Sección
+                Herboristeria
               </Text>
             </TouchableOpacity>
           </Col>
@@ -154,9 +140,9 @@ class HomeScreen extends React.Component {
         <Footer style={styles.footer}>
           <FooterTab style={styles.footer}>
 
-            <Button>
-              <Icon name="home" style={{ color: '#fff', fontWeight: 'bold' }} />
-              <Text style={styles.textoBotonesActive}>Inicio</Text>
+            <Button onPress={() => this.props.navigation.navigate('Noticias')}>
+              <Icon name="paper" style={{ color: '#fff' }} />
+              <Text style={styles.textoBotones}>Noticias</Text>
             </Button>
 
             <Button onPress={() => this.props.navigation.navigate('Lanzamientos')}>
@@ -164,9 +150,9 @@ class HomeScreen extends React.Component {
               <Text style={styles.textoBotones}>Lanzamientos</Text>
             </Button>
 
-            <Button onPress={() => this.props.navigation.navigate('Noticias')}>
-              <Icon name="paper" style={{ color: '#fff' }} />
-              <Text style={styles.textoBotones}>Noticias</Text>
+            <Button onPress={this.onShare}>
+              <Icon name="share" style={{ color: '#fff' }} />
+              <Text style={styles.textoBotones}>Compartir</Text>
             </Button>
 
           </FooterTab>
@@ -182,11 +168,14 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
   footer: {
-    backgroundColor: '#052040'
+    backgroundColor: '#000',
+    height: 80
   },
   textoBotones: {
     color: 'white',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    marginTop: 10,
+    marginBottom: 10
   },
   textoBotonesActive: {
     color: 'skyblue',
@@ -209,17 +198,18 @@ const styles = StyleSheet.create({
     height: 50
   },
   vistas: {
-    height: 250,
+    height: 170,
     width: '100%',
     borderRadius: 10,
     marginTop: 20
   },
   separata: {
-    marginTop: 130,
-    marginBottom: 130
+    marginTop: 20,
+    marginBottom: 20
   },
   head: {
-    backgroundColor: '#052040'
+    backgroundColor: '#000',
+    height: 'auto'
   },
   accesos: {
     fontSize: 18,

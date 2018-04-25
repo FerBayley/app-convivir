@@ -21,7 +21,7 @@ class ProductoDestacado extends React.Component {
   onShare(){
     Share.share({
         title: 'ConvivirPress App',
-        uri:'https://www.convivirpress.com',
+        uri:'http://convivirpress.com/',
         message: 'Descargate la app del periodico Convivir y esta siempre informado sobre todo lo que pasa en el mundo del buen vivir. Descargala en https://www.convivirpress.com'
     });
 }
@@ -31,14 +31,9 @@ class ProductoDestacado extends React.Component {
 
       <Container style={styles.container}>
         <Header style={styles.head}>
-          <Left>
-            <Button transparent>
-              <Icon name='arrow-back' onPress={() => this.props.navigation.navigate('HomeScreen')}
-                style={{ color: 'white' }}/>
-            </Button>
-          </Left>
+          <Left></Left>
           <Body>
-            <Title style={styles.textoBotones}>Garden Angels</Title>
+            <Title style={styles.textoBotones}>Tratenfu</Title>
           </Body>
           <Right>
             <Button transparent>
@@ -54,20 +49,86 @@ class ProductoDestacado extends React.Component {
         />
         <Content showsVerticalScrollIndicator={false}>
           <Image style={styles.destaque}          
-            source={require('../assets/images/producto-destacado.png')} 
+            source={require('../assets/images/leche-almendras.jpg')} 
           />
 
-          <Text style={{ fontSize: 20, paddingLeft: 20, paddingTop: 20 }}>Palo Santo Garden Angels</Text>
+          <Text style={{ fontSize: 20, paddingLeft: 20, paddingTop: 20, fontWeight: '800' }}>Lecha de almendras Tratenfu</Text>
           <Text style={{ fontSize: 17, textAlign: 'justify', lineHeight: 30, paddingLeft: 20, paddingRight: 20, color: 'grey'}}>
-            Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem 
-            Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un 
-            impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de 
-            textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo 
-            sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, 
-            quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las 
-            hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software 
-            de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+            Pensada para aquellos que buscan una vida alimenticia más saludable, llega al mercado la primera 
+            leche de almendras de industria nacional que se presenta en este formato. Disponible en los 
+            sabores: Original, Vainilla y Chocolate. “-Con su envase TetraPak, se logra alargar la vida útil 
+            de la leche –sin la necesidad de ningún tipo de conservante ni aditivos– y además el producto ya 
+            no depende de la cadena de frío. El mercado argentino de Leche de Almendras es pequeño, pero en 
+            expansión. Hoy en día la oferta que existe requiere cadena de frío y tiene un vencimiento 
+            corto, lo que dificulta el almacenamiento y la distribución, por eso decidimos crear este producto 
+            innovador”, explican desde TRATENFU.  La leche de almendras TRATENFU se presenta en envase de un 
+            litro y para el 2018 planean producir 200 mil litros.
           </Text>
+
+          <Text style={{ fontSize: 17, textAlign: 'justify', lineHeight: 30, paddingLeft: 20, paddingRight: 20, color: 'grey'}}>
+            Sobre el producto: Es apto para personas con celiaquía, intolerancia a la lactosa, pero también 
+            apunta a brindar una solución a todos aquellos que buscan una alimentación más saludable. De esa 
+            manera, se convierte en una opción ideal también para quienes eligen suprimir los lácteos en su 
+            dieta diaria, ya sea para beber un vaso, comer cereales o cortar el café.
+          </Text>
+
+          <Text style={{ fontSize: 16, paddingLeft: 20, paddingTop: 20, fontWeight: '800' }}>Descripción y beneficios:</Text>
+
+          <Text style={{ fontSize: 16, paddingLeft: 20, paddingTop: 20, lineHeight: 30, paddingRight: 20 }}>
+            Es una bebida vegetal y natural.
+          </Text>
+
+          <Text style={{ fontSize: 16, paddingLeft: 20, paddingTop: 20, lineHeight: 30, paddingRight: 20 }}>
+            Libre de gluten y lactosa.
+          </Text>
+
+          <Text style={{ fontSize: 16, paddingLeft: 20, paddingTop: 20, lineHeight: 30, paddingRight: 20 }}>
+            Libre de gluten y lactosa.
+          </Text>
+
+          <Text style={{ fontSize: 16, paddingLeft: 20, paddingTop: 20, lineHeight: 30, paddingRight: 20 }}>
+            No contiene aditivos ni conservantes.
+          </Text>
+
+          <Text style={{ fontSize: 16, paddingLeft: 20, paddingTop: 20, lineHeight: 30, paddingRight: 20 }}>
+            Fortificada en calcio y fuente de vitaminas A, D y B12.
+          </Text>
+
+          <Text style={{ fontSize: 16, paddingLeft: 20, paddingTop: 20, lineHeight: 30, paddingRight: 20 }}>
+            Mejora la condición cardiovascular.
+          </Text>
+
+          <Text style={{ fontSize: 16, paddingLeft: 20, paddingTop: 20, lineHeight: 30, paddingRight: 20 }}>
+            Mejora la condición cardiovascular.
+          </Text>
+
+          <Text style={{ fontSize: 16, paddingLeft: 20, paddingTop: 20, lineHeight: 30, paddingRight: 20 }}>
+            Ayuda a mejorar problemas gastrointestinales.
+          </Text>
+
+          <Text style={{ fontSize: 16, paddingLeft: 20, paddingTop: 20, lineHeight: 30, paddingRight: 20 }}>
+            Ayuda a bajar el colesterol malo.
+          </Text>
+
+          <Text style={{ fontSize: 16, paddingLeft: 20, paddingTop: 20, lineHeight: 30, paddingRight: 20 }}>
+            Es un excelente antioxidante.
+          </Text>
+
+          <Text style={{ fontSize: 16, paddingLeft: 20, paddingTop: 20, paddingBottom: 30, lineHeight: 30, paddingRight: 20 }}>
+            Vencimiento: 10 meses.
+          </Text>
+
+          <Text style={{ fontSize: 17, textAlign: 'justify', lineHeight: 30, paddingLeft: 20, paddingRight: 20, color: 'grey'}}>
+            TRATENFU SA es empresa argentina con más de diez años de experiencia en el mercado de alimentos 
+            saludables. Importan y comercializan la línea de productos Blue Patna, marca líder uruguaya, que 
+            incluye desde fideos y arroces, hasta galletitas dulces y saladas. La empresa cuenta con 
+            presencia nacional a través de distribuidores, mayoristas y principales cadenas de supermercados 
+            que avalan su experiencia a través de todos estos años.
+          </Text>
+
+          <Text style={{ fontSize: 17, textAlign: 'justify', lineHeight: 30, paddingLeft: 20, paddingRight: 20, color: 'grey', paddingBottom: 20, paddingTop: 20 }}>MÁS INFORMACIÓN: www.tratenfu.com</Text>
+
+          
 
         </Content>
         
@@ -79,14 +140,14 @@ class ProductoDestacado extends React.Component {
               <Text style={styles.textoBotonesActive}>Inicio</Text>
             </Button>
 
-            <Button onPress={() => this.props.navigation.navigate('Lanzamientos')}>
-              <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
-              <Text style={styles.textoBotones}>Lanzamientos</Text>
-            </Button>
-
             <Button onPress={() => this.props.navigation.navigate('Noticias')}>
               <Icon name="paper" style={{ color: '#fff' }} />
               <Text style={styles.textoBotones}>Noticias</Text>
+            </Button>
+
+            <Button onPress={() => this.props.navigation.navigate('Lanzamientos')}>
+              <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
+              <Text style={styles.textoBotones}>Lanzamientos</Text>
             </Button>
 
           </FooterTab>
@@ -102,7 +163,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
   footer: {
-    backgroundColor: '#052040'
+    backgroundColor: '#000',
+    height: 80
   },
   textoBotones: {
     color: 'white',
@@ -139,7 +201,7 @@ const styles = StyleSheet.create({
     marginBottom: 130
   },
   head: {
-    backgroundColor: '#052040'
+    backgroundColor: '#000000'
   },
   accesos: {
     fontSize: 18,

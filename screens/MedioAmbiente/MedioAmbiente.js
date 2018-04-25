@@ -21,7 +21,7 @@ class MedioAmbiente extends React.Component {
   onShare(){
     Share.share({
         title: 'ConvivirPress App',
-        uri:'https://www.convivirpress.com',
+        uri:'http://convivirpress.com/',
         message: 'Descargate la app del periodico Convivir y esta siempre informado sobre todo lo que pasa en el mundo del buen vivir. Descargala en https://www.convivirpress.com'
     });
 }
@@ -49,10 +49,10 @@ class MedioAmbiente extends React.Component {
           </Right>
         </Header>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('ProductoDestacado')}>
           <View style={styles.novedadesContainer}>
           <Icon name="md-arrow-forward" style={styles.advisor}>
-            <Text> Nuevos productos de Garden Angels</Text>
+            <Text> Leche de almendras Trtenfu</Text>
           </Icon>
           </View>
         </TouchableOpacity>
@@ -66,101 +66,80 @@ class MedioAmbiente extends React.Component {
           />
 
           <List>
+            <View style={{ backgroundColor: '#333' }}>
+              <ListItem>
+                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/03/basura-cero-marzo-150x150.jpg' }}
+                    style={{ marginRight: 20 }}
+                  />
+                  <Body>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('MedioAmbienteArticulo1')}>
+                      <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#fff' }}>¿Cómo vivir de forma ecológica y no morir en el intento?</Text>
+                    </TouchableOpacity>
+                  </Body>
+              </ListItem>
+            </View>
+
+            <View style={{ backgroundColor: '#dfe6e9' }}>
+              <ListItem>
+                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/oxigeno-150x150.jpg' }}
+                    style={{ marginRight: 20 }}
+                  />
+                  <Body>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('MedioAmbienteArticulo2')}>
+                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Inhalamos…¿oxígeno?</Text>
+                    </TouchableOpacity>
+                  </Body>
+              </ListItem>
+            </View>
+
             <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/06/tension-emocional-150x150.jpg' }}
+                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/01/jardin-vertical-con-palets-recuperados-150x150.jpg' }}
                   style={{ marginRight: 20 }}
                 />
                 <Body>
-                  <TouchableOpacity onPress={() => this.props.navigation.navigate('MedioAmbienteArticulo')}>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
+                  <TouchableOpacity onPress={() => this.props.navigation.navigate('MedioAmbienteArticulo3')}>
+                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Jardines verticales, una manera de mejorar la ciudad</Text>
                   </TouchableOpacity>
                 </Body>
             </ListItem>
 
+           <View style={{ backgroundColor: '#dfe6e9' }}>
             <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/03/basura-marzo-150x150.jpg' }}
+                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/01/41227687_303-150x150.jpg' }}
+                    style={{ marginRight: 20 }}
+                  />
+                  <Body>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('MedioAmbienteArticulo4')}>
+                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>La acidificación de los océanos: consecuencia directa del cambio climático</Text>
+                    </TouchableOpacity>
+                  </Body>
+              </ListItem>
+           </View>
+
+            <ListItem>
+                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/11/vacas-pedos-150x150.jpg' }}
                   style={{ marginRight: 20 }}
                 />
                 <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
+                  <TouchableOpacity onPress={() => this.props.navigation.navigate('MedioAmbienteArticulo5')}>
+                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>¿Pueden las vacas con menos flatulencias ayudar al planeta?</Text>
                   </TouchableOpacity>
                 </Body>
             </ListItem>
 
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/03/uruguay-marzo-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
+            <View style={{ backgroundColor: '#dfe6e9' }}>
+              <ListItem>
+                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/09/huerto-urbano-4-150x150.jpg' }}
+                    style={{ marginRight: 20 }}
+                  />
+                  <Body>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('MedioAmbienteArticulo6')}>
+                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Huerta urbana primaveral: Cultivo de plantas medicinales</Text>
+                    </TouchableOpacity>
+                  </Body>
+              </ListItem>
+            </View>
 
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/03/ser-urbano-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
-
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/natwash-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
-
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/drenaje-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
-
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/10/NO-TIRARAS-copia-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
-
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/10/comer-sano-hoy-copia-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
           </List>
         </Content>
         
@@ -173,13 +152,13 @@ class MedioAmbiente extends React.Component {
             </Button>
 
             <Button onPress={() => this.props.navigation.navigate('Noticias')}>
-              <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
-              <Text style={styles.textoBotones}>Lanzamientos</Text>
+              <Icon name="paper" style={{ color: '#fff', fontWeight: 'bold' }} />
+              <Text style={styles.textoBotones}>Noticias</Text>
             </Button>
 
             <Button onPress={() => this.props.navigation.navigate('Lanzamientos')}>
-              <Icon name="paper" style={{ color: '#fff' }} />
-              <Text style={styles.textoBotones}>Noticias</Text>
+              <Icon name="send" style={{ color: '#fff' }} />
+              <Text style={styles.textoBotones}>Lanzamientos</Text>
             </Button>
 
           </FooterTab>
@@ -195,7 +174,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
   footer: {
-    backgroundColor: '#052040'
+    backgroundColor: '#000',
+    height: 80
   },
   textoBotones: {
     color: 'white',
@@ -232,7 +212,7 @@ const styles = StyleSheet.create({
     marginBottom: 130
   },
   head: {
-    backgroundColor: '#052040'
+    backgroundColor: '#000000'
   },
   accesos: {
     fontSize: 18,
@@ -241,7 +221,7 @@ const styles = StyleSheet.create({
     paddingTop: 10
   },
   vidriera: {
-    height: 250,
+    height: 100,
     width: '100%'
   }
 });

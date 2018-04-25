@@ -21,7 +21,7 @@ class VidaSanaArticulo extends React.Component {
   onShare(){
     Share.share({
         title: 'ConvivirPress App',
-        uri:'https://www.convivirpress.com',
+        uri:'http://convivirpress.com/',
         message: 'Descargate la app del periodico Convivir y esta siempre informado sobre todo lo que pasa en el mundo del buen vivir. Descargala en https://www.convivirpress.com'
     });
 }
@@ -81,14 +81,14 @@ class VidaSanaArticulo extends React.Component {
               <Text style={styles.textoBotonesActive}>Inicio</Text>
             </Button>
 
-            <Button onPress={() => this.props.navigation.navigate('Lanzamientos')}>
-              <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
-              <Text style={styles.textoBotones}>Lanzamientos</Text>
-            </Button>
-
             <Button onPress={() => this.props.navigation.navigate('Noticias')}>
               <Icon name="paper" style={{ color: '#fff' }} />
               <Text style={styles.textoBotones}>Noticias</Text>
+            </Button>
+
+            <Button onPress={() => this.props.navigation.navigate('Lanzamientos')}>
+              <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
+              <Text style={styles.textoBotones}>Lanzamientos</Text>
             </Button>
 
           </FooterTab>
@@ -104,7 +104,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
   footer: {
-    backgroundColor: '#052040'
+    backgroundColor: '#000',
+    height: 80
   },
   textoBotones: {
     color: 'white',
@@ -141,7 +142,7 @@ const styles = StyleSheet.create({
     marginBottom: 130
   },
   head: {
-    backgroundColor: '#052040'
+    backgroundColor: '#000000'
   },
   accesos: {
     fontSize: 18,

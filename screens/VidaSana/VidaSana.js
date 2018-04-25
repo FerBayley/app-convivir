@@ -21,7 +21,7 @@ class VidaSana extends React.Component {
   onShare(){
     Share.share({
         title: 'ConvivirPress App',
-        uri:'https://www.convivirpress.com',
+        uri:'http://convivirpress.com/',
         message: 'Descargate la app del periodico Convivir y esta siempre informado sobre todo lo que pasa en el mundo del buen vivir. Descargala en https://www.convivirpress.com'
     });
 }
@@ -49,10 +49,10 @@ class VidaSana extends React.Component {
           </Right>
         </Header>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('ProductoDestacado')}>
           <View style={styles.novedadesContainer}>
           <Icon name="md-arrow-forward" style={styles.advisor}>
-            <Text> Nuevos productos de Garden Angels</Text>
+            <Text> Leche de almendras Tratenfu</Text>
           </Icon>
           </View>
         </TouchableOpacity>
@@ -66,101 +66,80 @@ class VidaSana extends React.Component {
           />
 
           <List>
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/08/vidas-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity onPress={() => this.props.navigation.navigate('VidaSanaArticulo')}>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
+            <View style={{ backgroundColor: '#333' }}>
+              <ListItem>
+                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/04/bienestar-696x506.png' }}
+                    style={{ marginRight: 20 }}
+                  />
+                  <Body>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('VidaSanaArticulo1')}>
+                      <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#fff' }}>Sorpresas te da la vida, Ay Dios! – Abril 2018</Text>
+                    </TouchableOpacity>
+                  </Body>
+              </ListItem>
+            </View>
+
+            <View style={{ backgroundColor: '#dfe6e9' }}>
+              <ListItem>
+                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/08/vidas-150x150.jpg' }}
+                    style={{ marginRight: 20 }}
+                  />
+                  <Body>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('VidaSanaArticulo2')}>
+                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Señores de nuestras vidas</Text>
+                    </TouchableOpacity>
+                  </Body>
+              </ListItem>
+            </View>
 
             <ListItem>
                 <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/07/corre-verduras-150x150.jpg' }}
                   style={{ marginRight: 20 }}
                 />
                 <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
+                  <TouchableOpacity onPress={() => this.props.navigation.navigate('VidaSanaArticulo3')}>
+                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Sanamente y al máximo</Text>
                   </TouchableOpacity>
                 </Body>
             </ListItem>
 
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/06/poder-mente-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
+            <View style={{ backgroundColor: '#dfe6e9' }}>
+              <ListItem>
+                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/06/poder-mente-150x150.jpg' }}
+                    style={{ marginRight: 20 }}
+                  />
+                  <Body>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('VidaSanaArticulo4')}>
+                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>¿Se puede sanar con la imaginación?</Text>
+                    </TouchableOpacity>
+                  </Body>
+              </ListItem>
+            </View>
 
             <ListItem>
                 <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/06/suen%CC%83os-150x150.jpg' }}
                   style={{ marginRight: 20 }}
                 />
                 <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
+                  <TouchableOpacity onPress={() => this.props.navigation.navigate('VidaSanaArticulo5')}>
+                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Marzo 17 – La vida es sueño</Text>
                   </TouchableOpacity>
                 </Body>
             </ListItem>
 
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/clorofila-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
+            <View style={{ backgroundColor: '#dfe6e9' }}>
+              <ListItem>
+                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/clorofila-150x150.jpg' }}
+                    style={{ marginRight: 20 }}
+                  />
+                  <Body>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('VidaSanaArticulo6')}>
+                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>El poder de la clorofila</Text>
+                    </TouchableOpacity>
+                  </Body>
+              </ListItem>
+            </View>
 
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/11/hipertension--150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
-
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/09/distribuidoras-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
-
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/03/pseudocereales-marzo-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
           </List>
         </Content>
         
@@ -173,13 +152,13 @@ class VidaSana extends React.Component {
             </Button>
 
             <Button onPress={() => this.props.navigation.navigate('Noticias')}>
-              <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
-              <Text style={styles.textoBotones}>Lanzamientos</Text>
+              <Icon name="paper" style={{ color: '#fff', fontWeight: 'bold' }} />
+              <Text style={styles.textoBotones}>Noticias</Text>
             </Button>
 
             <Button onPress={() => this.props.navigation.navigate('Lanzamientos')}>
-              <Icon name="paper" style={{ color: '#fff' }} />
-              <Text style={styles.textoBotones}>Noticias</Text>
+              <Icon name="send" style={{ color: '#fff' }} />
+              <Text style={styles.textoBotones}>Lanzamientos</Text>
             </Button>
 
           </FooterTab>
@@ -195,7 +174,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
   footer: {
-    backgroundColor: '#052040'
+    backgroundColor: '#000',
+    height: 80
   },
   textoBotones: {
     color: 'white',
@@ -232,7 +212,7 @@ const styles = StyleSheet.create({
     marginBottom: 130
   },
   head: {
-    backgroundColor: '#052040'
+    backgroundColor: '#000000'
   },
   accesos: {
     fontSize: 18,
@@ -241,7 +221,7 @@ const styles = StyleSheet.create({
     paddingTop: 10
   },
   vidriera: {
-    height: 250,
+    height: 100,
     width: '100%'
   }
 });

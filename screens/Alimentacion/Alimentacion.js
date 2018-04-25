@@ -21,7 +21,7 @@ class Alimentacion extends React.Component {
   onShare(){
     Share.share({
         title: 'ConvivirPress App',
-        uri:'https://www.convivirpress.com',
+        uri:'http://convivirpress.com/',
         message: 'Descargate la app del periodico Convivir y esta siempre informado sobre todo lo que pasa en el mundo del buen vivir. Descargala en https://www.convivirpress.com'
     });
 }
@@ -49,10 +49,10 @@ class Alimentacion extends React.Component {
           </Right>
         </Header>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('ProductoDestacado')}>
           <View style={styles.novedadesContainer}>
           <Icon name="md-arrow-forward" style={styles.advisor}>
-            <Text> Nuevos productos de Garden Angels</Text>
+            <Text> Leche de almendras Tratenfu</Text>
           </Icon>
           </View>
         </TouchableOpacity>
@@ -68,101 +68,86 @@ class Alimentacion extends React.Component {
 
 
           <List>
+            <View style={{ backgroundColor: '#333' }}>
+              <ListItem>
+                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/te-150x150.jpg' }}
+                    style={{ marginRight: 20 }}
+                  />
+                  <Body>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('AlimentacionArticulo')}>
+                      <Text style={{ fontSize: 13, fontWeight: 'bold', color: '#fff' }}>Té verde vs. Té negro: ¿qué sabés de ellos?</Text>
+                    </TouchableOpacity>
+                  </Body>
+              </ListItem>
+            </View>
+
+
+            <View style={{ backgroundColor: '#dfe6e9' }}>
+              <ListItem>
+                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/teff-2000x1180-150x150.jpg' }}
+                    style={{ marginRight: 20 }}
+                  />
+                  <Body>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('AlimentacionArticulo2')}>
+                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Teff, el exótico grano Etíope gluten free</Text>
+                    </TouchableOpacity>
+                  </Body>
+              </ListItem>
+            </View>
+
+
             <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/smoothie-de-matcha-696x640.jpg' }}
+                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/macrobio-150x150.jpg' }}
                   style={{ marginRight: 20 }}
                 />
                 <Body>
-                  <TouchableOpacity onPress={() => this.props.navigation.navigate('AlimentacionArticulo')}>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
+                  <TouchableOpacity onPress={() => this.props.navigation.navigate('AlimentacionArticulo3')}>
+                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Macrobiótica: comer según las leyes de la naturaleza</Text>
+                    <Text></Text>
                   </TouchableOpacity>
                 </Body>
             </ListItem>
+
+            <View style={{ backgroundColor: '#dfe6e9' }}>
+              <ListItem>
+                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/microbioma-150x150.jpg' }}
+                    style={{ marginRight: 20 }}
+                  />
+                  <Body>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('AlimentacionArticulo4')}>
+                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Sembrando un intestino saludable: Microbioma</Text>
+                      <Text></Text>
+                    </TouchableOpacity>
+                  </Body>
+              </ListItem>
+            </View>
 
             <ListItem>
                 <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/01/despues-de-las-fiestas-150x150.jpg' }}
                   style={{ marginRight: 20 }}
                 />
                 <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
+                  <TouchableOpacity onPress={() => this.props.navigation.navigate('AlimentacionArticulo5')}>
+                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Alimentación después de navidad</Text>
+                    <Text></Text>
                   </TouchableOpacity>
                 </Body>
             </ListItem>
 
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/10/cuatro-leyes-de-la-alimentacion-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
+            <View style={{ backgroundColor:'#dfe6e9' }}>
+              <ListItem>
+                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/01/champin%CC%83ones_rellenos_destacada-150x150.jpg' }}
+                    style={{ marginRight: 20 }}
+                  />
+                  <Body>
+                    <TouchableOpacity onPress={() => this.props.navigation.navigate('AlimentacionArticulo6')}>
+                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Champiñones rellenos con ensaladita de rúcula, nueces y duraznos</Text>
+                      <Text></Text>
+                    </TouchableOpacity>
+                  </Body>
+              </ListItem>
+            </View>
 
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/08/piramide-vegana-copia-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
-
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/08/aluba-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
-
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/03/maxresdefault-1-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
-
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/03/villares-marzo-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
-
-            <ListItem>
-                <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/03/pseudocereales-marzo-150x150.jpg' }}
-                  style={{ marginRight: 20 }}
-                />
-                <Body>
-                  <TouchableOpacity>
-                    <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                    <Text>200cc de leche de almendras 1 banana chica 1 cdita.</Text>
-                  </TouchableOpacity>
-                </Body>
-            </ListItem>
           </List>
         </Content>
         
@@ -197,7 +182,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff'
   },
   footer: {
-    backgroundColor: '#052040'
+    backgroundColor: '#000',
+    height: 80
   },
   textoBotones: {
     color: 'white',
@@ -234,7 +220,7 @@ const styles = StyleSheet.create({
     marginBottom: 130
   },
   head: {
-    backgroundColor: '#052040'
+    backgroundColor: '#000'
   },
   accesos: {
     fontSize: 18,
@@ -243,7 +229,7 @@ const styles = StyleSheet.create({
     paddingTop: 10
   },
   vidriera: {
-    height: 250,
+    height: 100,
     width: '100%'
   },
   note: {
