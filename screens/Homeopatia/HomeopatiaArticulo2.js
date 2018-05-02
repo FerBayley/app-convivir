@@ -38,7 +38,7 @@ class HomeopatiaArticulo2 extends React.Component {
             </Button>
           </Left>
           <Body>
-            <Title style={styles.textoBotones}>Matcha</Title>
+            <Title style={styles.textoBotones}>Homeopatia</Title>
           </Body>
           <Right>
             <Button transparent>
@@ -54,32 +54,19 @@ class HomeopatiaArticulo2 extends React.Component {
         />
         <Content showsVerticalScrollIndicator={false}>
           <Image style={{ width: '100%', height: 150 }}
-            source={{uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/te-696x464.jpg'}} />
+            source={{uri: 'http://www.convivirpress.com/wp-content/uploads/2017/10/perros-gripe2-696x464.jpg'}} />
           
 
-          <Text style={{ fontSize: 20, paddingLeft: 20, paddingTop: 20 }}>Té verde vs. Té negro: ¿qué sabés de ellos?</Text>
+          <Text style={{ fontSize: 20, paddingLeft: 20, paddingTop: 20 }}>El NOSODE homeopático</Text>
 
           <Text style={{ fontSize: 17, textAlign: 'justify', lineHeight: 30, paddingLeft: 20, paddingRight: 20, color: 'grey'}}>
-            Esta planta milenaria proveniente de Oriente, tuvo que recorrer varios kilómetros para llegar a 
-            nuestras tazas. Originaria de China, se trasladó a otros países como Japón y con el tiempo llegó 
-            a tierras Occidentales. Europa lo tomó como propio siendo hoy en día una verdadera costumbre… la 
-            hora del té (five o’clock tea). Pronto el té conquistó el mundo y actualmente es luego del agua, 
-            la segunda bebida más consumida.
-            El té proviene de un arbusto cuyo nombre científico es Camellia Sinensis. Su sabor, intensidad y 
-            nta, pero la diferencia es que el primero se obtiene de las primeras hojas, las más próximas y lo 
-            más importante es que carece del proceso de fermentación y oxidación. Al no sufrir dicho 
-            procedimiento tiene un alto poder antioxidante, polifenoles y flavonoides abundan en él, 
-            principalmente las famosas “catequinas”. Las mismas tienen infinidades de beneficios en el 
-            organismo: previenen el envejecimiento celular y cada vez hay más estudios que las relacionan 
-            con la reducción de hipercolesterolemia, hipertensión, capacidad de nivelar la glucemia, evitar 
-            caries y hasta como un gran aliado para prevenir la aparición de infecciones y enfermedades 
-            degenerativas.
-            El té verde presenta varias vitaminas y minerales siendo relevantes: Las Vitaminas A, E, C y 
-            B2 y minerales como calcio, cobre, cromo, hierro, fluor, magnesio, potasio, selenio, fosforo 
-            como también aminoácidos y aceites aromáticos. Por lo que no solo es agua, contiene un montón 
-            de nutrientes que ayudan no solo a depurar, detoxificar y nutrir el organismo sino a contribuir a 
-            un buen estado de ánimo. Contiene un componente llamado “teanina” que posee efectos relajantes y 
-            colabora a la disminución de ansiedad y el estrés.
+          ¿Qué tienen en común dos enfermedades que se dan en dos especies diferentes: El complejo viral respiratorio felino y la Traqueobronquitis infecciosa canina, llamada popularmente “Tos de las perreras”? Las dos enfermedades son transmitidas por un conjunto de microorganismos que actúan en forma conjunta y que no siempre son los mismos. Existe una simbiosis en su accionar. En ambos casos el terreno fértil para el desarrollo de estas verdaderas asociaciones de gérmenes patógenos es fundamental. Recordemos la famosa frase “uno no se enferma de lo que quiere sino de lo que puede”. Vamos a hablar de la prevención y el tratamiento. En ambos casos, como los agentes causales son tan variados y combinados: virus, bacterias y demás yerbas. Las vacunas tienen un efecto relativo. Lo mismo pasa con los antibióticos que no sirven para las virosis. Y como dijimos que el factor “terreno” es fundamental hay que tratar al paciente ayudándolo a convivir con su enfermedad. Los gatitos que padecen el complejo respiratorio, tienen el mayor problema cuando dejan de comer. Sea por la gran congestión nasal o las lesiones en la boca, los mininos no pueden comer. El primer paso en el tratamiento es lograr que coman. Por eso uno de los tratamientos a implementar es el corticoide, que va en contra del sentido común en cuanto a la lucha contra las virosis. No se deberían usar corticoides cuando hay un virus dando vuelta, porque e bajan las defensas. Sin embargo en estos casos una dosis pequeña de dexametasona ayuda a que el gatito vuelva a comer y no se deteriore tanto. Lo mismo pasa con el uso de antibióticos, si bien no sirven para matar virus, sí lo hace con las bacterias que acompañan y con dosis altas de pocos días ayudan mucho a mejorar la calidad de vida. (corticoides en bajas dosis y antibióticos por pocos días es un tema para desarrollar más extenso). Lo importante es reforzar las defensas, modificar el terreno para que mejoren los síntomas, lograr un equilibrio entre enfermo y enfermedad. Para ello los homeópatas tenemos una gran herramienta, que es el NOSODE. 
+
+Un Nosode es el nombre que se usa para hacer mención a un remedio preparado, ya sea del tejido de una enfermedad real, o de organismos asociados con enfermedades, bacterias o virus en forma de cultivo. Para estas enfermedades multietiológicas, la toma de muestras de secreciones patológicas de animales enfermos y la elaboración con esas muestras de los autonosodes para cada animal enfermo es una forma de ayudar y mucho a su tratamiento. Al disponer de una gran cantidad de autonosodes, se puede hacer un pool de ellos para crear un NOSODE de la enfermedad, que se utiliza en cualquier otro caso de la misma patología. Puedo tomar una muestra de secreción patológica: moco, secreción ocular, hisopado de garganta etc. y con eso elaborar un autonosode para ese caso específico o puedo ya tener elaborado un nosode para tos de las perreras o nosode respiratorio para el complejo felino y usarlo en cualquier caso, incluso como preventivo, para cuando hay varios animales en la casa y se enferma uno.  Y funciona muy bien. Incluso en los gatos cuando la enfermedad se hace crónica. Son esos gatos que viven con mocos o conjuntivitis toda la vida. El nosode homeopático se ha transformado en una gran herramienta para tratar este tipo de enfermedades y merece ser conocido y difundido.
+
+Salud y alegría. Hasta la próxima.
+
+
           </Text>
 
         </Content>

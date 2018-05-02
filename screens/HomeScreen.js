@@ -59,7 +59,7 @@ class HomeScreen extends React.Component {
           </Body>          
         </Header>
 
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('Alimentacion')}>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('ProductoDestacado')}>
           <View style={styles.novedadesContainer}>
           <Icon name="md-arrow-forward" style={styles.advisor}>
             <Text> Leche de almendras Tratenfu</Text>
@@ -74,7 +74,7 @@ class HomeScreen extends React.Component {
 
 
         <Grid>
-          <Col style={{ height: 1000, padding: 7 }}>
+          <Col style={{ height: 700, padding: 7 }}>
 
             <TouchableOpacity onPress={() => this.props.navigation.navigate('Alimentacion')}>
               <Image 
@@ -94,7 +94,7 @@ class HomeScreen extends React.Component {
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Celiaquia')}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('SinInformacion')}>
               <Image 
                 style={styles.vistas}
                 source={require('../assets/images/celiacos.png')} />
@@ -104,7 +104,7 @@ class HomeScreen extends React.Component {
             </TouchableOpacity>
           </Col>
 
-          <Col style={{ height: 1000, padding: 7 }}>
+          <Col style={{ height: 700, padding: 7 }}>
             <TouchableOpacity onPress={() => this.props.navigation.navigate('VidaSana')}>
               <Image 
                 style={styles.vistas}
@@ -123,7 +123,7 @@ class HomeScreen extends React.Component {
               </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Herboristeria')}>
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('SinInformacion')}>
               <Image 
                 style={styles.vistas}
                 source={require('../assets/images/herboristeria-thumb.png')} />
@@ -133,8 +133,6 @@ class HomeScreen extends React.Component {
             </TouchableOpacity>
           </Col>
         </Grid>
-
-        <View style={styles.separata}></View>
         </Content>
         
         <Footer style={styles.footer}>
@@ -202,10 +200,6 @@ const styles = StyleSheet.create({
     width: '100%',
     borderRadius: 10,
     marginTop: 20
-  },
-  separata: {
-    marginTop: 20,
-    marginBottom: 20
   },
   head: {
     backgroundColor: '#000',

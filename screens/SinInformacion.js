@@ -15,7 +15,7 @@ import {
     
 } from 'react-native';
 
-class Noticias extends React.Component {
+class SinInformacion extends React.Component {
 
   state = {
     isFontLoaded: false
@@ -30,14 +30,13 @@ class Noticias extends React.Component {
 
   static navigationOptions = {
     header: null,
-    headerLeft: null,
-    gesturesEnabled: false,
+    headerLeft: null
   };   
 
   onShare(){
     Share.share({
         title: 'ConvivirPress App',
-        uuri:'http://convivirpress.com/',
+        uri:'http://convivirpress.com/',
         message: 'Descargate la app del periodico Convivir y esta siempre informado sobre todo lo que pasa en el mundo del buen vivir. Descargala en https://www.convivirpress.com'
     });
 }
@@ -58,10 +57,19 @@ class Noticias extends React.Component {
     const { isFontLoaded } = this.state;
     return (
       <Container style={styles.container}>
-        <Header style={styles.head}>        
+        <Header style={styles.head}>
+          <Left>
+            <Button transparent>
+              <Icon name='arrow-back' onPress={() => this.props.navigation.navigate('HomeScreen')}
+                style={{ color: 'white' }}/>
+            </Button>
+          </Left>
           <Body>
-            <Title style={styles.textoBotones}>Noticias</Title>
-          </Body>          
+            <Title style={styles.textoBotones}>No disponible</Title>
+          </Body>
+          <Right>
+            <Button transparent></Button>
+          </Right>
         </Header>
 
         <Content showsVerticalScrollIndicator={false}>
@@ -69,11 +77,11 @@ class Noticias extends React.Component {
               barStyle="light-content"
           />
 
-          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', alignContent: 'center', marginTop: 250 }}>
+          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', alignContent: 'center', marginTop: 150 }}>
             <Image 
-              style={{ width: 100, height: 100 }}
-              source={require('../assets/images/news.png')} />
-              <Text style={{ marginTop: 15 }}>Sin noticias cargadas</Text>
+              style={{ width: 200, height: 200 }}
+              source={require('../assets/images/empty.png')} />
+              <Text style={{ marginTop: 15 }}>Sin información al momento</Text>
           </View>
 
         <View style={styles.separata}></View>
@@ -87,13 +95,12 @@ class Noticias extends React.Component {
               <Text style={styles.textoBotonesActive}>Inicio</Text>
             </Button>
 
-            <Button>
+            <Button onPress={() => this.props.navigation.navigate('Noticias')}>
               <Icon name="paper" style={{ color: '#fff' }} />
               <Text style={styles.textoBotones}>Noticias</Text>
             </Button>
 
-
-            <Button onPress={() => this.props.navigation.navigate('Lanzamientos')}>
+            <Button>
               <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
               <Text style={styles.textoBotones}>Lanzamientos</Text>
             </Button>
@@ -159,4 +166,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Noticias;
+export default SinInformacion;

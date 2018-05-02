@@ -48,9 +48,8 @@ class ProductoDestacado extends React.Component {
             barStyle="light-content"
         />
         <Content showsVerticalScrollIndicator={false}>
-          <Image style={styles.destaque}          
-            source={require('../assets/images/leche-almendras.jpg')} 
-          />
+        <Image style={{ width: '100%', height: 150 }}
+            source={{uri: 'http://www.convivirpress.com/wp-content/uploads/2018/04/leche-de-almendras-tratenfu-larga-vida-D_NQ_NP_706011-MLA27085540255_032018-F-1068x808.jpg'}} />
 
           <Text style={{ fontSize: 20, paddingLeft: 20, paddingTop: 20, fontWeight: '800' }}>Lecha de almendras Tratenfu</Text>
           <Text style={{ fontSize: 17, textAlign: 'justify', lineHeight: 30, paddingLeft: 20, paddingRight: 20, color: 'grey'}}>

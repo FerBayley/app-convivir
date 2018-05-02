@@ -38,7 +38,7 @@ class HomeopatiaArticulo1 extends React.Component {
             </Button>
           </Left>
           <Body>
-            <Title style={styles.textoBotones}>Matcha</Title>
+            <Title style={styles.textoBotones}>Homeopatia</Title>
           </Body>
           <Right>
             <Button transparent>
@@ -54,32 +54,23 @@ class HomeopatiaArticulo1 extends React.Component {
         />
         <Content showsVerticalScrollIndicator={false}>
           <Image style={{ width: '100%', height: 150 }}
-            source={{uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/te-696x464.jpg'}} />
+            source={{uri: 'http://www.convivirpress.com/wp-content/uploads/2017/11/perro-pirotecnia-696x260.jpg'}} />
           
 
-          <Text style={{ fontSize: 20, paddingLeft: 20, paddingTop: 20 }}>Té verde vs. Té negro: ¿qué sabés de ellos?</Text>
+          <Text style={{ fontSize: 20, paddingLeft: 20, paddingTop: 20 }}>Mi perro tiene terror a las tormentas y petardos</Text>
 
           <Text style={{ fontSize: 17, textAlign: 'justify', lineHeight: 30, paddingLeft: 20, paddingRight: 20, color: 'grey'}}>
-            Esta planta milenaria proveniente de Oriente, tuvo que recorrer varios kilómetros para llegar a 
-            nuestras tazas. Originaria de China, se trasladó a otros países como Japón y con el tiempo llegó 
-            a tierras Occidentales. Europa lo tomó como propio siendo hoy en día una verdadera costumbre… la 
-            hora del té (five o’clock tea). Pronto el té conquistó el mundo y actualmente es luego del agua, 
-            la segunda bebida más consumida.
-            El té proviene de un arbusto cuyo nombre científico es Camellia Sinensis. Su sabor, intensidad y 
-            nta, pero la diferencia es que el primero se obtiene de las primeras hojas, las más próximas y lo 
-            más importante es que carece del proceso de fermentación y oxidación. Al no sufrir dicho 
-            procedimiento tiene un alto poder antioxidante, polifenoles y flavonoides abundan en él, 
-            principalmente las famosas “catequinas”. Las mismas tienen infinidades de beneficios en el 
-            organismo: previenen el envejecimiento celular y cada vez hay más estudios que las relacionan 
-            con la reducción de hipercolesterolemia, hipertensión, capacidad de nivelar la glucemia, evitar 
-            caries y hasta como un gran aliado para prevenir la aparición de infecciones y enfermedades 
-            degenerativas.
-            El té verde presenta varias vitaminas y minerales siendo relevantes: Las Vitaminas A, E, C y 
-            B2 y minerales como calcio, cobre, cromo, hierro, fluor, magnesio, potasio, selenio, fosforo 
-            como también aminoácidos y aceites aromáticos. Por lo que no solo es agua, contiene un montón 
-            de nutrientes que ayudan no solo a depurar, detoxificar y nutrir el organismo sino a contribuir a 
-            un buen estado de ánimo. Contiene un componente llamado “teanina” que posee efectos relajantes y 
-            colabora a la disminución de ansiedad y el estrés.
+          –Hola doctor. Quiero que me prepare esas gotitas que me dio el año pasado para mi perro que le tiene terror a las tormentas y también a los petardos.
+
+-La Fórmula Homeopática de Tormentas, ya se las preparo.
+
+-Es la primera vez que paso unas navidades tranquila, sin ver a mi perro temblar como una hoja o drogado que se caía a cada paso, no sé qué tienen las gotas pero son mágicas. Pasó las fiestas lo más bien, sólo se sobresaltaba un poco con los petardos y venía a buscar mimos, que como usted me aconsejó no se los daba. Todo bien.
+
+Esta conversación se repite mucho en estos días. Es que se viene el fin de año a pasos acelerados y hay que prepararse. Además parece que las tormentas fuertes están de moda y son muchos los animales que sufren de terror por estos acontecimientos.
+
+Los perros presentan con bastante frecuencia un miedo irracional a los ruidos fuertes (truenos, petardos, golpes), la mayoría de los casos es un problema de difícil solución. Sea por genética (perros tímidos o muy sensibles), por una socialización deficiente o simplemente por algún susto por ruido, nuestro perro entra en pánico. En estas situaciones pierde el control, esto produce un estado emocional de bloqueo, donde no nos conoce, tiembla, quiere esconderse o huir desesperadamente, está totalmente fuera de sí. Los tratamientos convencionales, con tranquilizantes muchas veces no solucionan el problema e incluso lo empeoran por su efecto ataráxico y narcótico, muchos de ustedes ya pasaron por esa mala experiencia. La homeopatía junto con consejos sobre cómo manejarnos puede ayudar en algunos casos. El veterinario homeópata luego de un estudio profundo puede indicar un tratamiento individual que lo mejore. También se pueden usar fórmulas homeopáticas (FORMULA TORMENTAS) ya preparadas con un tropismo hacia esos miedos irracionales para tratar la urgencia y luego hacer el estudio individual. Es de destacar que algunos perros además tienen mucho miedo a las tormentas, al punto que las predicen, comienzan a esconderse y temblar antes que suene el primer trueno, con como meteorólogos y más preciso que los de la tele. Para esos casos también la homeopatía ayuda mucho. El animal tratado disminuye su ansiedad y su miedo paralizante y si bien continua con su ansiedad nerviosa, la pasa mucho mejor. Es importante en estos casos no mimarlos o acariciarlos, ni tampoco retarlos, ya que reforzaríamos su temor. La indiferencia y el tratar de cambiar su atención, con juguetes que les gusten mucho, como una pelota o poniendo música fuerte para tapar un poco los ruidos, son parte de nuestros consejos. Busquen a un buen veterinario homeópata o recurran a las gotitas de Tormenta para los días de fin de año o durante los truenos recordando que los remedios homeopáticos o funcionan por semejanza con nuestro perro (la mayoría de las veces) o a lo sumo no hacen nada. Son estímulos energéticos que se dan en forma de gotitas bebibles.
+
+Salud y alegría. Hasta la próxima.
           </Text>
 
         </Content>

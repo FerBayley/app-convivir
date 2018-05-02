@@ -69,139 +69,12 @@ class Lanzamientos extends React.Component {
               barStyle="light-content"
           />
 
-          <List>
-            <ListItem>
-                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/09/belleza-3-150x150.jpg' }}
-                    style={{ marginRight: 20 }}
-                  />
-                  <Body>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('LanzamientoProducto')}>
-                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                      <Text>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</Text>
-                    </TouchableOpacity>
-                  </Body>
-              </ListItem>
-
-              <ListItem>
-                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/03/basura-marzo-150x150.jpg' }}
-                    style={{ marginRight: 20 }}
-                  />
-                  <Body>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('LanzamientoProducto')}>
-                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                      <Text>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</Text>
-                    </TouchableOpacity>
-                  </Body>
-              </ListItem>
-
-              <ListItem>
-                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/drenaje-150x150.jpg' }}
-                    style={{ marginRight: 20 }}
-                  />
-                  <Body>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('null')}>
-                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                      <Text>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</Text>
-                    </TouchableOpacity>
-                  </Body>
-              </ListItem>
-
-              <ListItem>
-                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/03/uruguay-marzo-150x150.jpg' }}
-                    style={{ marginRight: 20 }}
-                  />
-                  <Body>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('LanzamientoProducto')}>
-                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                      <Text>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</Text>
-                    </TouchableOpacity>
-                  </Body>
-              </ListItem>
-
-              <ListItem>
-                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/03/ser-urbano-150x150.jpg' }}
-                    style={{ marginRight: 20 }}
-                  />
-                  <Body>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('LanzamientoProducto')}>
-                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                      <Text>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</Text>
-                    </TouchableOpacity>
-                  </Body>
-              </ListItem>
-
-              <ListItem>
-                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/03/higado-marzo-150x150.jpg' }}
-                    style={{ marginRight: 20 }}
-                  />
-                  <Body>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('LanzamientoProducto')}>
-                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                      <Text>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</Text>
-                    </TouchableOpacity>
-                  </Body>
-              </ListItem>
-
-              <ListItem>
-                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/smoothie-de-matcha-696x640.jpg' }}
-                    style={{ marginRight: 20 }}
-                  />
-                  <Body>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('LanzamientoProducto')}>
-                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                      <Text>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</Text>
-                    </TouchableOpacity>
-                  </Body>
-              </ListItem>
-
-              <ListItem>
-                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2017/11/insomnio-flores-150x150.jpg' }}
-                    style={{ marginRight: 20 }}
-                  />
-                  <Body>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('LanzamientoProducto')}>
-                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                      <Text>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</Text>
-                    </TouchableOpacity>
-                  </Body>
-              </ListItem>
-
-              <ListItem>
-                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/oh-sol-que-me-hiciste-mal-150x150.jpeg' }}
-                    style={{ marginRight: 20 }}
-                  />
-                  <Body>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('LanzamientoProducto')}>
-                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                      <Text>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</Text>
-                    </TouchableOpacity>
-                  </Body>
-              </ListItem>
-
-              <ListItem>
-                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/02/newborn-150x150.jpg' }}
-                    style={{ marginRight: 20 }}
-                  />
-                  <Body>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('LanzamientoProducto')}>
-                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                      <Text>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</Text>
-                    </TouchableOpacity>
-                  </Body>
-              </ListItem>
-
-              <ListItem>
-                  <Thumbnail square size={90} source={{ uri: 'http://www.convivirpress.com/wp-content/uploads/2018/01/champin%CC%83ones_rellenos_destacada-150x150.jpg' }}
-                    style={{ marginRight: 20 }}
-                  />
-                  <Body>
-                    <TouchableOpacity onPress={() => this.props.navigation.navigate('LanzamientoProducto')}>
-                      <Text style={{ fontSize: 13, fontWeight: 'bold' }}>Titulo de este articulo</Text>
-                      <Text>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto.</Text>
-                    </TouchableOpacity>
-                  </Body>
-              </ListItem>
-          </List>
+          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', alignContent: 'center', marginTop: 250 }}>
+            <Image 
+              style={{ width: 100, height: 100 }}
+              source={require('../assets/images/launch.png')} />
+              <Text style={{ marginTop: 15 }}>Sin lanzamientos disponibles</Text>
+          </View>
 
         <View style={styles.separata}></View>
         </Content>
@@ -245,7 +118,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   textoBotonesActive: {
-    color: 'skyblue',
+    color: '#fff',
     fontWeight: 'bold'
   },
   advisor: {

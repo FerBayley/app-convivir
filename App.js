@@ -75,6 +75,10 @@ import VidaSanaArticulo6 from './screens/VidaSana/VidaSanaArticulo6'
 //VidaSana
 
 
+import SinInformacion from './screens/SinInformacion'
+
+
+
 
 export default class App extends React.Component {
   render() {
@@ -158,4 +162,9 @@ const AppStackNavigator = StackNavigator({
   VidaSanaArticulo5: { screen: VidaSanaArticulo5 },
   VidaSanaArticulo6: { screen: VidaSanaArticulo6 },
 //VidaSana
+
+
+  SinInformacion: { screen: SinInformacion },
+
+
 })

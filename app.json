@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "app-convivir",
-    "description": "This project is really great.",
+    "description": "Aplicación para el el periodico Convivir Press",
     "slug": "app-convivir",
     "privacy": "public",
     "sdkVersion": "25.0.0",
@@ -15,7 +15,12 @@
       "backgroundColor": "#000000"
     },
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.convivirpress.convivirapp"
+    },
+    "android": {
+      "package": "com.convivirpress.convivirapp",
+      "versionCode": 2,
+      "permissions": []
     }
   }
 }
