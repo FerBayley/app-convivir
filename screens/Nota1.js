@@ -16,17 +16,20 @@ import {
     
 } from 'react-native';
 
-class HomeScreen extends React.Component {
+class Nota1 extends React.Component {
 
   state = {
     isFontLoaded: false
   }
 
   static navigationOptions = {
-    header: null,
-    headerLeft: null,
-    gesturesEnabled: false,
-  };   
+    title: 'ConvivirPress',
+    headerBackTitle: 'Volver',
+    headerStyle: {
+        backgroundColor: '#000',
+      },
+      headerTintColor: '#fff'
+  };
 
   onShare(){
     Share.share({
@@ -59,16 +62,6 @@ class HomeScreen extends React.Component {
     const { isFontLoaded } = this.state;
     return (
       <Container style={styles.container}>
-        <Header style={styles.head}>        
-          <Body>
-            <View>
-              <BlurView tint="dark" intensity={50}>
-                <Image style={{ width: 40, height: 40, marginTop: 25 }} source={{ uri: logo }} />
-              </BlurView>
-            </View>
-            <Title style={styles.textoBotones}>ConvivirPress</Title>
-          </Body>          
-        </Header>
 
         <TouchableOpacity onPress={() => this.props.navigation.navigate('ProductoDestacado')}>
           <View style={styles.novedadesContainer}>
@@ -84,7 +77,6 @@ class HomeScreen extends React.Component {
           />
 
             <View style={styles.firstContainerCard}>
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Nota1')}>
                   <BlurView tint="light" intensity={50}>
                     <Image style={{ width: '100%', height: 300 }} source={{ uri: nota1 }} />
                   </BlurView>
@@ -93,59 +85,29 @@ class HomeScreen extends React.Component {
                   <Text style={styles.textSup}>Comienzan las clases. Todo es algarabía y emoción.  El uniforme, los útiles, los libros para la nueva 
                     etapa que se inicia.
                   </Text>
-                  </View>
-                  <View style={styles.bordeFinal}></View>
-            </TouchableOpacity>   
-            <Text style={styles.textoVermas}><Icon name="ios-share-outline" style={{ color: '#000' }} />    <Icon name="ios-star-outline" style={{ color: '#000' }} /></Text>
-            </View>
 
-            <View style={styles.secContainerCard}>
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Nota2')}>
-                  <BlurView tint="light" intensity={50}>
-                    <Image style={{ width: '100%', height: 300 }} source={{ uri: nota2 }} />
-                  </BlurView>
-                  <Text style={[styles.titulosSec, isFontLoaded && { fontFamily: 'DoHyeon' }]}>El cuerpo espartano</Text>
-                  <View style={styles.cajaText}>
-                  <Text style={styles.textSup}>Seres humanos… Seres marcados por gestos, sensaciones, gustos, aromas, vivencias físicas que sellan 
-                    su cotidianeidad, que posibilitan cambiar ambientes, realizar intercambios..</Text>
-                  </View>
-                  <View style={styles.bordeFinal}></View>
-            </TouchableOpacity>    
-            <Text style={styles.textoVermas}><Icon name="ios-share-outline" style={{ color: '#000' }} />    <Icon name="ios-star-outline" style={{ color: '#000' }} /></Text>
-            </View>
+                  <Text style={styles.textSup}>
+                    Para las mamás que tienen hij@s con intolerancia al gluten o son celíacos se agrega una preocupación: la búsqueda de soluciones 
+                    para la vianda de todos los días Sin TACC.  Y más aún si pensamos en preparaciones veganas, sin lácteos ni huevos.
+                  </Text>
 
-            <View style={styles.secContainerCard}>
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Nota3')}>
-                  <BlurView tint="light" intensity={50}>
-                    <Image style={{ width: '100%', height: 300 }} source={{ uri: nota3 }} />
-                  </BlurView>
-                  <Text style={[styles.titulosSec, isFontLoaded && { fontFamily: 'DoHyeon' }]}>Las MIGRAÑAS son un dolor de cabeza!!</Text>
-                  <View style={styles.cajaText}>
-                  <Text style={styles.textSup}>La migraña común se caracteriza por la aparición violenta de dolores intensos en un lado de la 
-                    cabeza, a menudo acompañados de náuseas y vómitos, que pueden durar algunas horas a varios días. Puede presentarse precedida 
-                    de trastornos visuales.
+                  <Text style={styles.textSup}>
+                    Trataremos en esta nota de aportar algunas propuestas partiendo de la idea de que un niñ@ celíac@ o con intolerancia intestinal 
+                    no tiene que renunciar a una dieta saludable, rica, variada y, por qué no, divertida.
+                  </Text>
+
+                  <Text style={styles.textSup}>
+                    Es importante entonces encontrar recetas prácticas y fáciles de preparar, sin dejar de lado que puedan compartirse con los otros 
+                    miembros de la familia.
+                    Cocinar hoy Sin TACC ya no es algo que se diferencie en sabores y colores de la comida tradicional.  Varían, claro, los modos de 
+                    preparación y los ingredientes.
+                    Para lograr opciones que sean saludables se requiere un tiempo más de planificación, que incluye la búsqueda de recetas teniendo en 
+                    cuenta el gusto l@s pequeñ@s.
+                    Siempre sugerimos que las viandas tengan ingredientes ya conocidos y probados. No es el momento de innovar y sí prestar atención 
+                    a que sea una comida equilibrada para evitar que el niñ@ quede con hambre.
                   </Text>
                   </View>
-                  <View style={styles.bordeFinal}></View>
-            </TouchableOpacity>  
-            <Text style={styles.textoVermas}><Icon name="ios-share-outline" style={{ color: '#000' }} />    <Icon name="ios-star-outline" style={{ color: '#000' }} /></Text>
-            </View>  
-
-          <View style={styles.secContainerCard} >
-            <TouchableOpacity onPress={() => this.props.navigation.navigate('Nota4')}>
-                  <BlurView tint="light" intensity={50}>
-                    <Image style={{ width: '100%', height: 300 }} source={{ uri: nota4 }} />
-                  </BlurView>
-                  <Text style={[styles.titulosSec, isFontLoaded && { fontFamily: 'DoHyeon' }]}>Homeopatía para todos</Text>
-                  <View style={styles.cajaText}>
-                  <Text style={styles.textSup}>Un pediatra homeópata amigo me contaba que cada día tiene más pacientes adultos. Son los padres, tíos, 
-                  abuelos de los nenes tratados con homeopatía.</Text>
-                  </View>
-                  <View style={styles.bordeFinal}></View>
-            </TouchableOpacity>       
-            <Text style={styles.textoVermas}><Icon name="ios-share-outline" style={{ color: '#000' }} />    <Icon name="ios-star-outline" style={{ color: '#000' }} /></Text>
-        </View>
-
+            </View>
         </Content>
         
         <Footer style={styles.footer}>
@@ -216,7 +178,7 @@ const styles = StyleSheet.create({
     height: 'auto'
   },
   accesos: {
-    fontSize: 50,
+    fontSize: 40,
     textAlign: 'center',
     letterSpacing: 0.5,
     paddingTop: 25,
@@ -238,11 +200,6 @@ const styles = StyleSheet.create({
   firstContainerCard: {
     backgroundColor: 'white',
     paddingBottom: 20,
-    shadowOffset:{  width: 4,  height: 4,  },
-    shadowColor: '#C2C2C2',
-    shadowOpacity: 1.5,
-    marginBottom: 20,
-    zIndex: 100
   },
   secContainerCard: {
     backgroundColor: 'white',
@@ -272,4 +229,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default HomeScreen;
+export default Nota1;

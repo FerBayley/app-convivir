@@ -1,5 +1,8 @@
 import React from 'react';
 import { Container, Header, Content, Footer, FooterTab, Button, Left, Body, Title, Right, Icon, List, ListItem, Thumbnail  } from 'native-base';
+import { Constants } from 'expo';
+import Expo from 'expo';
+import { BlurView } from 'expo';
 import {
     StyleSheet, 
     Text, 
@@ -13,10 +16,13 @@ import {
 class ProductoDestacado extends React.Component {
 
   static navigationOptions = {
-    header: null,
-    headerLeft: null,
-    gesturesEnabled: true,
-  };  
+    title: 'Leche de almendras Tratenfu',
+    headerBackTitle: 'Volver',
+    headerStyle: {
+        backgroundColor: '#000',
+      },
+      headerTintColor: '#fff'
+  };
 
   onShare(){
     Share.share({
@@ -27,30 +33,19 @@ class ProductoDestacado extends React.Component {
 }
 
   render() {
+
+    const producto = 'http://www.convivirpress.com/wp-content/uploads/2018/04/leche-de-almendras-tratenfu-larga-vida-D_NQ_NP_706011-MLA27085540255_032018-F.jpg';
+
     return (
 
       <Container style={styles.container}>
-        <Header style={styles.head}>
-          <Left></Left>
-          <Body>
-            <Title style={styles.textoBotones}>Tratenfu</Title>
-          </Body>
-          <Right>
-            <Button transparent>
-              <Icon name='share' onPress={this.onShare}
-                style={styles.textoBotones}
-              />
-            </Button>
-          </Right>
-        </Header>
-
         <StatusBar
             barStyle="light-content"
         />
         <Content showsVerticalScrollIndicator={false}>
-        <Image style={{ width: '100%', height: 150 }}
-            source={{uri: 'http://www.convivirpress.com/wp-content/uploads/2018/04/leche-de-almendras-tratenfu-larga-vida-D_NQ_NP_706011-MLA27085540255_032018-F-1068x808.jpg'}} />
-
+          <BlurView tint="dark" intensity={50}>
+            <Image style={{ width: '100%', height: 250 }} source={{ uri: producto }} />
+          </BlurView>
           <Text style={{ fontSize: 20, paddingLeft: 20, paddingTop: 20, fontWeight: '800' }}>Lecha de almendras Tratenfu</Text>
           <Text style={{ fontSize: 17, textAlign: 'justify', lineHeight: 30, paddingLeft: 20, paddingRight: 20, color: 'grey'}}>
             Pensada para aquellos que buscan una vida alimenticia más saludable, llega al mercado la primera 
@@ -135,18 +130,18 @@ class ProductoDestacado extends React.Component {
           <FooterTab style={styles.footer}>
 
             <Button onPress={() => this.props.navigation.navigate('HomeScreen')}>
-              <Icon name="home" style={{ color: '#fff', fontWeight: 'bold' }} />
-              <Text style={styles.textoBotonesActive}>Inicio</Text>
+              <Icon name="md-paper" style={{ color: '#fff' }} />
+              <Text style={{ color: '#fff' }}>Noticias</Text>
             </Button>
 
-            <Button onPress={() => this.props.navigation.navigate('Noticias')}>
-              <Icon name="paper" style={{ color: '#fff' }} />
-              <Text style={styles.textoBotones}>Noticias</Text>
+            <Button onPress={() => this.props.navigation.navigate('Secciones')}>
+              <Icon name="md-albums" style={{ color: '#fff' }} />
+              <Text style={{ color: '#fff' }}>Secciones</Text>
             </Button>
 
-            <Button onPress={() => this.props.navigation.navigate('Lanzamientos')}>
-              <Icon name="send" style={{ color: '#fff', fontWeight: 'bold' }} />
-              <Text style={styles.textoBotones}>Lanzamientos</Text>
+            <Button onPress={() => this.props.navigation.navigate('Favoritos')}>
+              <Icon name="md-star" style={{ color: '#fff' }} />
+              <Text style={{ color: '#fff' }}>Favoritos</Text>
             </Button>
 
           </FooterTab>

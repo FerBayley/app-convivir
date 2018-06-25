@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "app-convivir",
+    "name": "ConvivirPress",
     "description": "Aplicación para el el periodico Convivir Press",
     "slug": "app-convivir",
     "privacy": "public",
     "sdkVersion": "25.0.0",
     "platforms": ["ios", "android"],
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -19,7 +19,7 @@
     },
     "android": {
       "package": "com.convivirpress.convivirapp",
-      "versionCode": 2,
+      "versionCode": 3,
       "permissions": []
     }
   }

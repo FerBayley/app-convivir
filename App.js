@@ -4,6 +4,13 @@ import { StackNavigator } from 'react-navigation'
 import HomeScreen from './screens/HomeScreen'
 import Lanzamientos from './screens/Lanzamientos'
 import Noticias from './screens/Noticias'
+import Secciones from './screens/Secciones'
+import Favoritos from './screens/Favoritos'
+import ListSecciones from './screens/ListSecciones'
+import Nota1 from './screens/Nota1'
+import Nota2 from './screens/Nota2'
+import Nota3 from './screens/Nota3'
+import Nota4 from './screens/Nota4'
 
 
 import VidaSana from './screens/VidaSana/VidaSana'
@@ -92,6 +99,8 @@ const AppStackNavigator = StackNavigator({
   HomeScreen: { screen: HomeScreen },
   Noticias: { screen: Noticias },
   Lanzamientos: { screen: Lanzamientos },
+  Secciones: { screen: Secciones },
+  Favoritos: { screen: Favoritos },
 
 //Homeopatia
   Homeopatia: { screen: Homeopatia },
@@ -165,6 +174,11 @@ const AppStackNavigator = StackNavigator({
 
 
   SinInformacion: { screen: SinInformacion },
+  ListSecciones: { screen: ListSecciones },
+  Nota1: { screen: Nota1 },
+  Nota2: { screen: Nota2 },
+  Nota3: { screen: Nota3 },
+  Nota4: { screen: Nota4 },
 
 
 })
